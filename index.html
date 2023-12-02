@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WRDSS</title>
+    <style>
+        body {
+            text-align: center;font-family: Agency FB;
+        }
+
+        button {
+            margin: 5px;
+            background-color: black;
+            color: white;
+            border: 1px solid white;
+            padding: 10px;
+            cursor: pointer;
+		width:350px;
+		height: 46px;
+		font-family: Agency FB;font-size: 20px;
+        }
+
+        button:hover {
+            background-color: white;
+            color: black;
+            border: 3px solid black;
+        }
+	
+    </style>
+</head>
+<body>
+
+    <h1>WHITE ROOM DAILY SALARY SYSTEM</h1>
+    <h2>100 DOPAMIN BÄLLE: <span id="number">100</span></h2>
+
+    <button onclick="updateNumber(-20)">SOCIAL MEDIA (-20)</button><br>
+    <button onclick="updateNumber(-30)">SCROLLEN (-30)</button><br>
+    <button onclick="updateNumber(-60)">FAP (-60)</button><br>
+    <button onclick="updateNumber(-20)">VIDEO SPIELE (-20</button><br>
+    <button onclick="updateNumber(-50)">ALKOHOL/DROGEN (-50)</button><br>
+    <button onclick="updateNumber(-10)">SÜßIGKEITEN (-10)</button><br>
+    <button onclick="updateNumber(5)">RENNEN/JOGGEN (+5)</button><br>
+    <button onclick="updateNumber(5)">KALT DUSCHEN (+5)</button><br>
+    <button onclick="updateNumber(3)">TRAINING/WORKOUT(+3)</button><br>
+    <button onclick="updateNumber(1)">DEHNEN (+1)</button><br>
+    <button onclick="updateNumber(2)">MEDITATION(+2)</button><br>
+    <button onclick="resetNumber()">RESET/TAG BEENDEN</button><br>
+
+    <script>
+        function updateNumber(value) {
+            var numberElement = document.getElementById("number");
+            var currentNumber = parseInt(numberElement.innerHTML);
+            var newNumber = currentNumber + value;
+            numberElement.innerHTML = newNumber;
+        }
+
+        function resetNumber() {
+            document.getElementById("number").innerHTML = "100";
+        }
+    </script>
+
+</body>
+</html>
+
+
